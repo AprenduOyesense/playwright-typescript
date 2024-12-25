@@ -9,14 +9,14 @@ export default class HTMLReporter {
         const testConfig = {
             reportTitle: CommonConstants.REPORT_TITLE,
             outputPath: CommonConstants.RESULTS_PATH,
-            BASE_URL: process.env.BASE_URL,
-            SOAP_API_BASE_URL: process.env.SOAP_API_BASE_URL,
-            REST_API_BASE_URL: process.env.REST_API_BASE_URL,
-            DB_CONFIG: process.env.DB_CONFIG,
-            BROWSER: process.env.BROWSER,
+            BASE_URL: process.env.BASE_URL || 'N/A',  // Provide fallback value
+            SOAP_API_BASE_URL: process.env.SOAP_API_BASE_URL || 'N/A',  // Provide fallback value
+            REST_API_BASE_URL: process.env.REST_API_BASE_URL || 'N/A',  // Provide fallback value
+            DB_CONFIG: process.env.DB_CONFIG || 'N/A',  // Provide fallback value
+            BROWSER: process.env.BROWSER || 'Unknown',  // Provide fallback value
         };
         new HTMLReport().from(CommonConstants.JUNIT_RESULTS_PATH, testConfig);
-        console.log("Completed creating HTML Report");        
+        console.log("Completed creating HTML Report");
     }
 }
 

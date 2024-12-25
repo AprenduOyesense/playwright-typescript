@@ -1,7 +1,7 @@
 {
-  "name": "playwright-demo",
+  "name": "playwright-ts",
   "version": "1.0.0",
-  "description": "Playwright Demo framework",
+  "description": "oyetest",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "local:test:ui": "playwright test --project=local --ui"
   },
   "keywords": [],
-  "author": "Vinay Kumar B M",
+  "author": "oyetest",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "1.37.0",

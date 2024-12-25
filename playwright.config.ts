@@ -1,6 +1,7 @@
 import { PlaywrightTestConfig } from "@playwright/test";
 import dotenv from 'dotenv';
 import Browser from "./src/framework/manager/Browser";
+import CustomJUnitReporter from "framework/reporter/CustomJUnitReporter";
 
 dotenv.config();
 
@@ -47,6 +48,7 @@ const config: PlaywrightTestConfig = {
       },
     }],
     ['html', { open: 'never', outputFolder: "./test-results/report" }],
+    [CustomJUnitReporter, { outputFile: './test-results/results/custom-junit.xml' }],
     ["junit", { outputFile: "./test-results/results/results.xml" }],
     ["json", { outputFile: "./test-results/results/results.json" }],
     ["./src/framework/logger/TestListener.ts"],
