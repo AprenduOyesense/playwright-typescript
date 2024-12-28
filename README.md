@@ -1,10 +1,10 @@
-# playwright-sample-project
+
 
 ## **Overview:**
 
 This is a sample Automation project using Playwright and Typescript and uses playwright-testrunner to execute test cases. This is a Data Driven framework focused on separating the test scripts logic and the test data from each other. This allows us to create test automation scripts by passing different sets of test data. The test data set is kept in an external Excel Sheet. The test scripts connect to the external Excel sheet to get the test data. This framework significantly reduces the number of test scripts compared to a modular based framework when we need to test for multiple sets of data for same functionality.
 
-For Demo purpose UI test cases are created on [advantageonlineshopping.com](http://advantageonlineshopping.com/) site and API test cases are created on these [SOAP API](https://www.advantageonlineshopping.com/accountservice/ws/accountservice.wsdl) & [REST API](https://fakestoreapi.com) endpoints.
+
 
 ## Features
 
@@ -39,8 +39,6 @@ For Demo purpose UI test cases are created on [advantageonlineshopping.com](http
 ##### 1. Installation
 
 Playwright framework requires [Node.js](https://nodejs.org/) v14+ to run.
-
-Code from github need to be [download](https://github.com/VinayKumarBM/playwright-sample-project/archive/refs/heads/master.zip) OR [cloned](https://github.com/VinayKumarBM/playwright-sample-project.git) using git command.
 
 Installing the dependencies.
 ```sh
@@ -91,5 +89,4 @@ Execution log will be present in the log file.
 ```sh
 test-results/logs/execution.log
 ```
-##  ##
-**:pencil: If you find my work interesting don't forget to give a Star :star: & Follow me :busts_in_silhouette:**
+

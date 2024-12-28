@@ -9,11 +9,11 @@ const timeInMin: number = 60 * 1000;
 const config: PlaywrightTestConfig = {
   use: {
     browserName: Browser.type(process.env.BROWSER.toLowerCase()),
-    headless: false,
+    headless: true,
     channel: Browser.channel(process.env.BROWSER.toLowerCase()),
     launchOptions: {
       args: ["--start-maximized", "--disable-extensions", "--disable-plugins"],
-      headless: false,
+      headless: true,
       timeout: Number.parseInt(process.env.BROWSER_LAUNCH_TIMEOUT, 10),
       slowMo: 100,
       downloadsPath: "./test-results/downloads",
@@ -48,7 +48,6 @@ const config: PlaywrightTestConfig = {
       },
     }],
     ['html', { open: 'never', outputFolder: "./test-results/report" }],
-    [CustomJUnitReporter, { outputFile: './test-results/results/custom-junit.xml' }],
     ["junit", { outputFile: "./test-results/results/results.xml" }],
     ["json", { outputFile: "./test-results/results/results.json" }],
     ["./src/framework/logger/TestListener.ts"],
